@@ -1,7 +1,17 @@
 // ADICIONAR TAREFA NA LISTA
 const buttonAddTask = document.getElementById('criar-tarefa');
+
+// INPUT
 const input = document.getElementById('texto-tarefa');
+
+// LISTA ORDENADA
 const sortedList = document.getElementById('lista-tarefas');
+
+// BOTÃO DE APAGAR ITENS DA LISTA
+const buttonDeleteItems = document.getElementById('apaga-tudo');
+
+// BOTÃO REMOVER FINALIZADOS
+const buttonFinishedRemover = document.getElementById('remover-finalizados')
 
 const selectedItem = (event) => {
   const li = document.querySelectorAll('li')
@@ -47,3 +57,12 @@ const addTask = () => {
 
 buttonAddTask.addEventListener('click', addTask)
 
+const clearToDoList = () => {
+  const li = document.querySelectorAll('li')
+  
+  for (let i = 0; i < li.length; i++) {
+    li[i].remove();
+  }
+}
+
+buttonDeleteItems.addEventListener('click', clearToDoList)
