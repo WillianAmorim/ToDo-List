@@ -18,6 +18,15 @@ const selectedItem = (event) => {
   itemClicked.classList.add('selected')
 }
 
+const completeItem = (event) => {
+  const itemSelected = event.target;
+  if(!itemSelected.classList.contains('completed')){
+    itemSelected.classList.add('completed');
+  } else {
+    itemSelected.classList.remove('completed');
+  }
+}
+
 const clearInput = () => {
   input.value = ''
 }
@@ -25,6 +34,7 @@ const clearInput = () => {
 const createListItem = (valueInput) => {
   const createLi = document.createElement('li');
   createLi.setAttribute('onClick', 'selectedItem(event)');
+  createLi.setAttribute('ondblclick', 'completeItem(event)');
   sortedList.appendChild(createLi);
   createLi.innerHTML = valueInput;
 }
