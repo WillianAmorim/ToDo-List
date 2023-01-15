@@ -66,3 +66,13 @@ const clearToDoList = () => {
 }
 
 buttonDeleteItems.addEventListener('click', clearToDoList)
+
+const finishedRemover = () => {
+  const finishedItems = document.querySelectorAll('.completed')
+
+  for (let i = 0; i < finishedItems.length; i++) {
+    finishedItems[i].remove();
+  }
+}
+
+buttonFinishedRemover.addEventListener('click', finishedRemover)
