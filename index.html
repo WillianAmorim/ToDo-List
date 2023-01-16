@@ -8,24 +8,27 @@
   <title>Lista de Tarefas</title>
 </head>
 <body>
-  <section>
-    <h1>Minha lista de tarefas</h1>
+  <div class="container">
+    <div class="container-1">
+      <section class="section-info">
+        <h1>Minha lista de tarefas</h1>
+    
+        <p>Clique duas vezes em um item para marcá-lo como completo</p>
+      
+        <div class="div-input">
+          <input placeholder="Digite a tarefa" id="texto-tarefa" type="text">
+        </div>
 
-    <p>Clique duas vezes em um item para marcá-lo como completo</p>
-  </section>
-  
+        <div class="div-buttons">
+          <button id="criar-tarefa">Criar tarefa</button>
+          <button id="apaga-tudo">Limpar lista</button>
+          <button id="remover-finalizados">Remover Finalizados</button>
+        </div>
 
-  <input id="texto-tarefa" type="text">
-
-  <section>
-    <button id="criar-tarefa">Criar tarefa</button>
-    <button id="apaga-tudo">Limpar lista</button>
-    <button id="remover-finalizados">Remover Finalizados</button>
-  </section>
-
-  <section>
-    <ol id="lista-tarefas"></ol>
-  </section>
+        <ol id="lista-tarefas"></ol>
+      </section>
+    </div>
+  </div>
 </body>
 <script src="./script.js"></script>
 </html>
