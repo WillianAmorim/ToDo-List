@@ -1,7 +1,82 @@
+body {
+  background-color: black;
+}
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.container-1 {
+  border: 10px groove white;
+  width: 700px;
+  height: 94vh;
+}
+
+h1, p {
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 12px;
+}
+
+.div-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.div-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.div-input > input {
+  width: 350px;
+  height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.div-buttons > button {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  background-color: rgb(77, 68, 68);
+  color: white;
+}
+
+.section-info > h1{
+  align-items: center;
+}
+
 .selected {
   background-color: gray;
 }
 
 .completed {
   text-decoration: line-through solid black;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+ol > li{
+  width: 90%;
+  height: 25px;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 5px;
+  font-size: 20px;
+  color: black;
+  padding-left: 20px;
+  list-style: none;
 }
